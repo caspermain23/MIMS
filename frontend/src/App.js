@@ -5,6 +5,7 @@ import axios from 'axios';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import AcercaDe from './pages/AcercaDe';
 import Navbar from './components/Navbar';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -29,6 +30,7 @@ function App() {
         {/* Rutas públicas */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/acerca-de" element={<AcercaDe />} />
 
         {/* Ruta protegida */}
         <Route

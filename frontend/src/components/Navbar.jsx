@@ -24,11 +24,31 @@ const Navbar = () => {
       alignItems: 'center',
       boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
     }}>
-      <div style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
-        Inventario Med
+      <div style={{ fontSize: '1.4rem', fontWeight: 'bold', cursor: 'pointer' }} onClick={() => navigate('/')}>
+        💊 Inventario Med
       </div>
-      <div>
+      
+      <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+        <button
+          onClick={() => navigate('/acerca-de')}
+          style={{
+            background: 'rgba(255,255,255,0.2)',
+            color: 'white',
+            border: '1px solid white',
+            padding: '0.5rem 1rem',
+            borderRadius: '4px',
+            fontWeight: 'bold',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s'
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.3)'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+        >
+          ℹ️ Acerca de
+        </button>
+
         <span>Hola, {user.nombre || 'usuario'}</span>
+        
         <button
           onClick={handleLogout}
           style={{
