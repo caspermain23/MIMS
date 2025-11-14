@@ -1,0 +1,17 @@
+# Python
+venv/
+.venv/
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+
+# Node / React
+node_modules/
+build/
+dist/
+
+# IDE / Sistema
+.vscode/
+.idea/
+Thumbs.db
